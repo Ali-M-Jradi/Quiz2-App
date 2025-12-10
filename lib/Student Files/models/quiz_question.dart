@@ -1,6 +1,9 @@
 class QuizQuestion {
   final List<String> shuffledAnswers;
 
-  QuizQuestion()
-    : shuffledAnswers = List.of(answers)..shuffle();
+  QuizQuestion({
+     String? correctAnswer,
+     List<String>? answers,
+     String? text,
+  }) : shuffledAnswers = List.of(answers!)..shuffle();
 }
